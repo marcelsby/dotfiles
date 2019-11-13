@@ -4,7 +4,7 @@
 "                                                                               "
 " Version: 1.0 - 11/11/2019                                                     "
 "                                                                               "
-" Source:                                                                       "
+" Source: https://github.com/marcel-yamamoto/dotfiles                           "
 "                                                                               "
 " Sections:     1. Plugins                                                      "
 "               2. General                                                      "
