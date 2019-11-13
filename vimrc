@@ -39,39 +39,73 @@ endif
 " Plugin Section
 call plug#begin('~/.vim/plugged/')
 
-Plug 'ervandew/supertab' 
+" Colorschemes
 Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tomasr/molokai'
+Plug 'danilo-augusto/vim-afterglow'
+
+" GUI, Navigation and typing improvements
+Plug 'ervandew/supertab' 
 Plug 'scrooloose/nerdtree'
-Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-commentary'
+
+" Lint engine
+Plug 'w0rp/ale'
+
+
+" Syntax Highlight
+"
+" JavaScript 
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+" HTML 
+Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
-"Plug 'vim-scripts/AutoComplPop'
-Plug 'danilo-augusto/vim-afterglow'
-Plug 'altercation/vim-colors-solarized'
+
+" CSS {{{4
+Plug 'hail2u/vim-css3-syntax',            { 'for': 'css' }
+
 
 " Deoplete Package - dark powered neo-completion
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 
-" JS writting in VIM
+" Language Snippets and Auto-completion
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
- 
+
+" ALE config
+ let g:ale_fixers = {
+ \ 'javascript': ['eslint']
+ \ }
+let g:ale_sign_error = 'X'
+let g:ale_sign_warning = '!'
+let g:ale_fix_on_save = 1
+
 call plug#end()
 
-" Plugin CFG's
+" Plugins Configs
 
 " Lightline 
 set laststatus=2                    " Lightline [ON] or [OFF]
 let g:lightline = {                 
       \ 'colorscheme': 'wombat',    
+      \ 'active': {
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \ },
+      \ 'component': {
+      \   'fileformat': ''
+      \ },
       \ }
 
 " Deoplete
@@ -141,6 +175,7 @@ set completeopt-=preview
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " LEADER KEY
 let mapleader=","
+nnoremap <CR> :noh<CR><CR>
 
 nnoremap <leader>ft :NERDTreeToggle<cr>
 
@@ -148,26 +183,20 @@ nnoremap <leader>ft :NERDTreeToggle<cr>
 "                             5. Colors and GUI font                            "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SELECT COLORSCHEME (uncomment the lines of your preference theme)
-"                                # MOLOKAI #                                    "
-"
-"colorscheme molokai                      " Set Monokai based theme
 
-"                                # DRACULA #                                    "
-"syntax on
-"colorscheme dracula
+set termguicolors                        " enable true colors support
 
 "                                  # AYU #                                      "
-"set termguicolors                        " enable true colors support
 "let ayucolor="light"                     " for light version of theme
-"let ayucolor="mirage"                    " for mirage version of theme
+let ayucolor="mirage"                    " for mirage version of theme
 "let ayucolor="dark"                      " for dark version of theme
-"colorscheme ayu
 
-"                               # AFTERGLOW #                                   "
-set termguicolors
+"                               # SELECT YOUR COLORSCHEME #                     "
+" available: { dracula, ayu, afterglow, molokai }
 colorscheme afterglow 
+highlight Error guifg=Red guibg=#1a1a1a
 
-" SELECT FONT (uncomment the line with the font that you want)
+" SELECT FONT (uncomment the line where are the font that you want)
 set guifont=Roboto\ Mono\ Light:h18        " Roboto mono - size 18pt
 "set guifont=Fira\ Code\ Retina:h16        " Fira Code Retina - size 16pt
 set antialias
