@@ -11,19 +11,19 @@ set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin('~/.config/nvim/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'codota/tabnine-vim'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'luochen1990/rainbow'
 
 call vundle#end()
 
-let python_highlight_all=1
+syntax on
 set encoding=utf-8
 set hidden
 set shiftwidth=4
 set tabstop=4
 set number
+set hlsearch
 colorscheme sahara
 set mouse=a
 colo sahara
@@ -37,24 +37,5 @@ let mapleader="\<space>"
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 nnoremap <leader>ev :vs ~/.config/nvim/init.vim<cr>
 
-" Python
-autocmd BufNewFile *.py
-	\ colorscheme desert
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
-
-
-" Syntastic default config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Rainbow brackets
+let g:rainbow_active = 1
