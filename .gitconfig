@@ -1,0 +1,8 @@
+[user]
+	email = marcel.sby.br@gmail.com
+	name = Marcel Barbosa
+[credential]
+	helper = /usr/libexec/git-core/git-credential-libsecret
+[core]
+	editor = nvim 
+	askPass = 
