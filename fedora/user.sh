@@ -1,7 +1,6 @@
 # Configure the Flathub repo and install some flatpaks
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install discord spotify org.gnome.Extensions com.leinardi.gwe org.videolan.VLC
-flatpak update -y
 
 # Installations that needs downloads
 cd ~/Downloads 

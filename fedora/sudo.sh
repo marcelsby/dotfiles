@@ -16,4 +16,4 @@ dnf in -y https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64
 dnf in -y https://downloads.vivaldi.com/stable/vivaldi-stable-4.0.2312.27-1.x86_64.rpm
 
 # Install packages
-dnf in -y kitty neovim neofetch htop gnome-tweaks flatpak sublime-text code ripgrep	zsh exa git-credential-libsecret
+dnf in -y kitty neovim neofetch htop gnome-tweaks flatpak sublime-text code ripgrep	zsh exa git-credential-libsecret terminator
