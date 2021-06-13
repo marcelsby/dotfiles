@@ -1,0 +1,9 @@
+# Env variables
+export DOTFILES=~/Repos/Personal/dotfiles
+
+# Aliases
+alias ll="exa -la"
+alias ls="exa"
+alias gotodf="cd $DOTFILES"
+alias gitrdp="cd ~/Repos/Personal"
+alias gitrdw="cd ~/Repos/Work"

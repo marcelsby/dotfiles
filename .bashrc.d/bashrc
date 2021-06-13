@@ -1,0 +1,5 @@
+# Customizing the prompt
+source ~/.bashrc.d/git_prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
+PS1='\[\033[0;31m\]\u\[\033[00m\] in \[\033[0;35m\]\W$(__git_ps1 " (%s)")\n\[\033[01;32m\]❯ \[\033[00m\]'
