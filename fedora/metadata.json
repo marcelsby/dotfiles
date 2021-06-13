@@ -1,0 +1,12 @@
+{
+	"fedoraRelease": 34,
+	"executionOrder": [
+		"sudo.sh",
+		"user.sh",
+		"nvidia.sh",
+		"gnome/"
+	],
+	"optionals": [
+		"nvidia.sh"
+	]
+}
