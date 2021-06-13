@@ -103,16 +103,17 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Env variables
+export DOTFILES=~/Repos/Personal/dotfiles
+export EDITOR=nvim
+
+# Aliases
 alias ll="exa -la"
-alias ls="exa -l"
+alias ls="exa"
+alias gotodf="cd $DOTFILES"
+alias gitpd="cd ~/Repos/Personal"
+alias gitwd="cd ~/Repos/Work"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Autostart tmux
-if [[ $TERM == xterm-kitty ]] ; then
-    tmux attach -t default || tmux new -s default
-fi
