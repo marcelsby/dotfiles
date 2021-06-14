@@ -1,8 +1,7 @@
 {
 	"fedoraRelease": 34,
-	"executionOrder": [
-		"sudo.sh",
-		"user.sh",
+	"recommendedExecutionOrder": [
+		"install.sh",
 		"nvidia.sh",
 		"gnome/"
 	],

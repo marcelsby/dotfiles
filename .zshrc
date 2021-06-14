@@ -104,16 +104,26 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 
+# asdf - https://github.com/asdf-vm/asdf
+if ! [ -d ~/.asdf  ]; then
+	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+fi
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 # Env variables
 export DOTFILES=~/Repos/Personal/dotfiles
 export EDITOR=nvim
 
-# Aliases
+# General Aliases
 alias ll="exa -la"
 alias ls="exa"
 alias gotodf="cd $DOTFILES"
 alias gitpd="cd ~/Repos/Personal"
 alias gitwd="cd ~/Repos/Work"
+
+# Git aliases
+alias gs="git status"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
