@@ -1,0 +1,9 @@
+# General Aliases
+alias ll="exa -la"
+alias ls="exa"
+alias gotodf="cd $DOTFILES"
+alias gitpd="cd ~/Repos/Personal"
+alias gitwd="cd ~/Repos/Work"
+
+# Git aliases
+alias gs="git status"
