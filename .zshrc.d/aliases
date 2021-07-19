@@ -7,3 +7,4 @@ alias gitwd="cd ~/Repos/Work"
 
 # Git aliases
 alias gs="git status"
+
