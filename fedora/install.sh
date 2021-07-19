@@ -11,14 +11,14 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 # Add RPMFusion repositories (Free/Non-free)
 sudo dnf in -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-34.noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-34.noarch.rpm
 
-# Install Google Chrome and Vivaldi
+# Install Google Chrome
 sudo dnf in -y https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
-# Install Google Chrome and Vivaldi
+# Install Vivaldi
 sudo dnf in -y https://downloads.vivaldi.com/stable/vivaldi-stable-4.0.2312.27-1.x86_64.rpm
 
 # Install packages
-sudo dnf in -y kitty neovim neofetch htop gnome-tweaks flatpak sublime-text code ripgrep	zsh exa git-credential-libsecret terminator cronie
+sudo dnf in -y kitty neovim neofetch htop gnome-tweaks flatpak sublime-text code ripgrep	zsh exa git-credential-libsecret terminator cronie obs-studio
 
 # Install gcc, make, g++, etc...
 sudo dnf group install -y "C Development Tools and Libraries"
