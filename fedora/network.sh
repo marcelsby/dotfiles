@@ -5,6 +5,7 @@
 
 # Disable the local stub and disable systemd-resolved
 # https://fedoraproject.org/wiki/Changes/systemd-resolved#Opting_out_of_.2Fetc.2Fresolv.conf_that_points_to_the_localhost_stub_resolver
+# https://www.reddit.com/r/Fedora/comments/js2aqb/slow_internet_after_upgrade_to_fedora_33/
 sudo ln -sfv /run/NetworkManager/resolv.conf /etc/resolv.conf
 
 sudo systemctl disable --now systemd-resolved.service
