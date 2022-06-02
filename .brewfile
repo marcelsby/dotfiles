@@ -1,0 +1,4 @@
+brew "asdf"
+brew "exa"
+brew "ripgrep"
+brew "fzf"
