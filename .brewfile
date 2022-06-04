@@ -1,4 +1,6 @@
 brew "asdf"
+brew "bpytop"
 brew "exa"
-brew "ripgrep"
 brew "fzf"
+brew "fd"
+brew "ripgrep"
