@@ -1,9 +1,7 @@
-sudo apt install apt-transport-https curl
+sudo dnf install dnf-plugins-core
 
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
 
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
-sudo apt update
-
-sudo apt install brave-browser
+sudo dnf install -y brave-browser
